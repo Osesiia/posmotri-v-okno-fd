@@ -55,7 +55,7 @@ ol {
   align-items: end;
   gap: 30px;
   inline-size: 1140px;
-  block-size: 534px;
+  min-block-size: 534px;
 }
 
 .result {
@@ -207,6 +207,7 @@ ol {
   line-height: 100%;
   background-color: transparent;
   cursor: pointer;
+  block-size: 34px;
 }
 
 .button:hover {
@@ -231,7 +232,6 @@ ol {
 .search-form__submit-button {
   align-self: end;
   inline-size: 194px;
-  block-size: 34px;
 }
 
 .content__details {
@@ -277,7 +277,6 @@ ol {
 .more-button {
   flex-shrink: 0;
   inline-size: 100%;
-  block-size: 34px;
 }
 
 .content__card-link {
@@ -291,7 +290,9 @@ ol {
   background-color: #545050;
 }
 
-.content__card-link:hover .content__video-card-title {
+.content__card-link:hover .content__video-card-title,
+.content__card-link:hover .content__video-card-description {
+  text-decoration-thickness: 0.5px;
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-skip-ink: none;
@@ -337,7 +338,7 @@ ol {
   overflow: hidden;
   color: #fff;
   font-size: 18px;
-  line-height: 90%;
+  line-height: 100%;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
   line-clamp: 4;
